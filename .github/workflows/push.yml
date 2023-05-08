@@ -6,7 +6,7 @@ on:
 name: Deploy service
 jobs:
   deploy:
-    runs-on: self-hosted #${{matrix.os}} to reduce billing
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
     - name: deploy
