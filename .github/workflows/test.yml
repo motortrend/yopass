@@ -3,7 +3,7 @@ on: [pull_request]
 jobs:
   go:
     name: Go Test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted #ubuntu-latest to reduce billing
     services:
       redis:
         image: redis
@@ -36,7 +36,7 @@ jobs:
         token: dd0fadc9-f0f1-4cd1-8fa6-91665629f9d9
   node:
     name: Website Test
-    runs-on: ubuntu-latest
+    runs-on: self-hosted #ubuntu-latest to reduce billing
     steps:
       - uses: actions/checkout@v1
       - uses: actions/setup-node@v1
